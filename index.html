@@ -717,8 +717,8 @@ function getScanConfig() {
     fps: 15,
     aspectRatio: 1.7778,
     qrbox: function(vw, vh) {
-      const width = Math.floor(vw * 0.88);
-      const height = 96;   // 横長バーコード専用の細い読み取り帯
+      const width = Math.floor(vw * 0.90);
+      const height = (scanStep === 1) ? 50 : 90;
       return { width: width, height: height };
     },
     rememberLastUsedCamera: true,
